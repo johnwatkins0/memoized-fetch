@@ -1,4 +1,4 @@
-## memoizedFetch
+## memoizedFetch [![Build Status](https://travis-ci.com/johnwatkins0/memoized-fetch.svg?branch=master)](https://travis-ci.com/johnwatkins0/memoized-fetch)
 
 Wrapper for `window.fetch` that caches JSON responses using memoization. The function accepts the same arguments as [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) with an added third argument to enable cache busting. If the third argument is omitted, subsequent calls with the same arguments will serve the JSON response from memory or sessionStorage.
 
@@ -8,11 +8,17 @@ Wrapper for `window.fetch` that caches JSON responses using memoization. The fun
 
 ### Install
 
-// To-do
+`npm install memoized-fetch`
+
+OR
+
+`yarn add memoized-fetch`
 
 ### Examples
 
 ```JavaScript
+
+import memoizedFetch from 'memoized-fetch';
 
 (async () => {
     let json;
