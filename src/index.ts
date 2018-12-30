@@ -1,5 +1,7 @@
 import { isString, isBoolean, isDate, isNull, isNumber, isUndefined } from "lodash";
 
+declare const Promise: any;
+
 /**
  * Cache item interface.
  */
@@ -85,7 +87,7 @@ export function getCachedMemos(): MemoCache {
  */
 export function makeMemoizedFetch(CACHE: MemoCache = {}) {
 	return (input: RequestInfo, init: RequestInit = {}, memo?: any | any[]): Promise<{ [key: string]: any }> =>
-		new Promise(async (resolve, reject) => {
+		new Promise(async (resolve: any, reject: any) => {
 			const key = JSON.stringify(input) + JSON.stringify(init);
 
 			if (key in CACHE && memosMatch(CACHE[key].memo, memo)) {

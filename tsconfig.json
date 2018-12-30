@@ -1,9 +1,11 @@
 {
 	"compilerOptions": {
-		"lib": ["es2015", "dom"],
-		"outDir": "./dist/",
+		"lib": ["es2015", "es2015.promise", "dom"],
+		"outFile": "./dist/index.js",
 		"noImplicitAny": true,
-		"module": "es6",
-		"target": "es5"
-	}
+		"module": "amd",
+		"target": "es5",
+		"declaration": true
+	},
+	"files": ["src/index.ts"]
 }

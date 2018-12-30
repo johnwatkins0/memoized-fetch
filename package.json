@@ -7,14 +7,15 @@
 	"author": "John Watkins <johnwatkins0@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "rm -rf dist && parcel build src/index.ts --target=browser --no-source-maps --experimental-scope-hoisting && tsc --declaration",
+		"build": "rm -rf dist && tsc --outFile dist/index.js --module amd src/index.ts && tsc --declaration",
 		"dev": "parcel index.html --target=browser --experimental-scope-hoisting",
-		"prepublishOnly": "yarn build",
+		"publish": "yarn build",
 		"test": "jest"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
 		"@babel/plugin-transform-runtime": "^7.2.0",
+		"@types/es6-promise": "^3.3.0",
 		"@types/jest": "^23.3.10",
 		"@types/lodash": "^4.14.119",
 		"babel-jest": "^23.6.0",
