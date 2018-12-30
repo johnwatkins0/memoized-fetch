@@ -1,31 +1,41 @@
 {
-	"name": "memoized-fetch",
-	"version": "0.1.8",
-	"description": "Fetch with memoization that persists via sessionStorage.",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"author": "John Watkins <johnwatkins0@gmail.com>",
-	"license": "MIT",
-	"scripts": {
-		"build": "rm -rf dist && tsc",
-		"dev": "parcel index.html --target=browser --experimental-scope-hoisting",
-		"prepare": "yarn build",
-		"test": "jest"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.2.2",
-		"@babel/plugin-transform-runtime": "^7.2.0",
-		"@types/es6-promise": "^3.3.0",
-		"@types/jest": "^23.3.10",
-		"@types/lodash": "^4.14.119",
-		"babel-jest": "^23.6.0",
-		"babel-plugin-lodash": "^3.3.4",
-		"jest": "^23.6.0",
-		"parcel-bundler": "^1.11.0",
-		"ts-jest": "^23.10.5",
-		"typescript": "^3.2.2"
-	},
-	"dependencies": {
-		"lodash": "^4.17.11"
-	}
+  "name": "memoized-fetch",
+  "version": "0.1.8",
+  "description": "Fetch with memoization that persists via sessionStorage.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "John Watkins <johnwatkins0@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "dev": "parcel index.html --target=browser --experimental-scope-hoisting",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint && yarn test",
+    "test": "jest",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@types/es6-promise": "^3.3.0",
+    "@types/jest": "^23.3.10",
+    "@types/lodash": "^4.14.119",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
