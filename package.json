@@ -1,13 +1,13 @@
 {
 	"name": "memoized-fetch",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "Fetch with memoization that persists via sessionStorage.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"author": "John Watkins <johnwatkins0@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "rm -rf dist && tsc --outFile dist/index.js --module amd src/index.ts && tsc --declaration",
+		"build": "rm -rf dist && tsc",
 		"dev": "parcel index.html --target=browser --experimental-scope-hoisting",
 		"publish": "yarn build",
 		"test": "jest"
