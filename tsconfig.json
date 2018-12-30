@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "lib": ["es2015", "es2015.promise", "dom"],
-    "outFile": "./dist/index.js",
+    "outDir": "./dist",
     "noImplicitAny": true,
-    "module": "amd",
+    "module": "commonjs",
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "strict": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
