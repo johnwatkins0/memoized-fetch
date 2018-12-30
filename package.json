@@ -2,11 +2,12 @@
 	"name": "memoized-fetch",
 	"version": "0.1.0",
 	"description": "Fetch with memoization that persists via sessionStorage.",
-	"main": "dist/",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"author": "John Watkins <johnwatkins0@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "rm -rf dist && parcel build src/index.ts --target=browser --no-source-maps --experimental-scope-hoisting",
+		"build": "rm -rf dist && parcel build src/index.ts --target=browser --no-source-maps --experimental-scope-hoisting && tsc --declaration",
 		"dev": "parcel index.html --target=browser --experimental-scope-hoisting",
 		"prepublishOnly": "yarn build",
 		"test": "jest"
