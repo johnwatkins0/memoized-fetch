@@ -1,7 +1,5 @@
 import { isBoolean, isDate, isNull, isNumber, isString, isUndefined } from 'lodash';
 
-declare const Promise: any;
-
 /**
  * Cache item interface.
  */
