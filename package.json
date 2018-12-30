@@ -1,0 +1,29 @@
+{
+	"name": "memoized-fetch",
+	"version": "0.1.0",
+	"description": "Fetch with memoization that persists via sessionStorage.",
+	"main": "dist/",
+	"author": "John Watkins <johnwatkins0@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"build": "rm -rf dist && parcel build src/index.ts --target=browser --no-source-maps --experimental-scope-hoisting",
+		"dev": "parcel index.html --target=browser --experimental-scope-hoisting",
+		"prepublishOnly": "yarn build",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/plugin-transform-runtime": "^7.2.0",
+		"@types/jest": "^23.3.10",
+		"@types/lodash": "^4.14.119",
+		"babel-jest": "^23.6.0",
+		"babel-plugin-lodash": "^3.3.4",
+		"jest": "^23.6.0",
+		"parcel-bundler": "^1.11.0",
+		"ts-jest": "^23.10.5",
+		"typescript": "^3.2.2"
+	},
+	"dependencies": {
+		"lodash": "^4.17.11"
+	}
+}
