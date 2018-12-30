@@ -1,6 +1,6 @@
 {
 	"name": "memoized-fetch",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"description": "Fetch with memoization that persists via sessionStorage.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -9,7 +9,7 @@
 	"scripts": {
 		"build": "rm -rf dist && tsc",
 		"dev": "parcel index.html --target=browser --experimental-scope-hoisting",
-		"publish": "yarn build",
+		"prepare": "yarn build",
 		"test": "jest"
 	},
 	"devDependencies": {
